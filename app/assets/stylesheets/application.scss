@@ -1,0 +1,257 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ 
+@import "materialize";
+
+$navbar-font-color: white;
+$bg-grey: #e0e0e0;
+$blue: #29b6f6;
+$dark-grey: #424242;
+$red: #e53935;
+$blue-darken: #1e88e5;
+$green: #43a047;
+$amber: #ff8f00;
+$orange: #ef6c00;
+
+$nav-hover-height: 0.4em;
+
+nav {
+  background-color: black;
+  position: fixed;
+  top: 2em;
+  z-index: 1000;
+  .hover {
+    position: absolute;
+    width: 100%;
+    height: $nav-hover-height;
+    bottom: -$nav-hover-height;
+    background: $blue;
+    transition: 0.4s;
+  }
+  ul {
+    li {
+      position: relative;
+      overflow: hidden;
+      &:hover {
+        a {
+        color: $blue;
+        }
+        .hover {
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.brand-logo > img {
+  width: 80%;
+  margin: 0 auto;;
+}
+
+.main-image {
+  position: relative;
+  width: 100%;
+  margin-bottom: -6px;
+  img {
+    width: 100%;
+  }
+}
+
+.main-image-text {
+  position: absolute;
+  width: 100%;
+  top: 30%;
+  text-align: center;
+  color: white;
+  h1 {
+    font-size: 3em;
+    margin-bottom: 0;
+  }
+  h2 {
+    font-size: 2em;
+    margin-top: 0;
+    @extend .light;
+  }
+}
+
+.services {
+  width: 100%;
+  padding: 0 0 1em 0;
+  margin: 0;
+  background: $bg-grey;
+  .card-title {
+    position: static !important;
+    padding: 0 !important;
+  }
+  .services-header {
+    h2 {
+      color: $blue;
+      font-size: 2.2em;
+      text-align: center;
+      margin: 0;
+      padding: 1em 0 0 0;
+    }
+    h3 {
+      @extend .light;
+      font-size: 1em;
+      text-align: center;
+      color: $dark-grey;
+      margin-top: 0;
+    }
+  }
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.card {
+  .card-image {
+    text-align: center;
+    i.activator {
+      font-size: 6em;
+      padding: 0.6em;
+      border-radius: 50%;
+      color: white;
+      margin-top: 0.1em;
+      transition: 0.5s;
+    }
+    .card-content, .card-reveal {
+      text-align: left;
+    }
+  }
+  &:hover {
+    i.activator {
+      font-size: 7em;
+      box-shadow: inset 0px 0px 0px 0.08em #fff;
+    }
+    i.activator.camera {
+      border: 5px solid $red;
+    } 
+    i.activator.videocam {
+      border: 5px solid $blue-darken;
+    }
+    i.activator.editing {
+      border: 5px solid $amber;
+    }
+    i.activator.inspection {
+      border: 5px solid $green;
+    }
+  }
+  p {
+    @extend .light;
+  }
+  i.activator.camera {
+    background: $red;
+  }
+  i.activator.videocam {
+    background: $blue-darken;
+  }
+  i.activator.editing {
+    background: $amber;
+  }
+  i.activator.inspection {
+    background: $green;
+  }
+}
+
+.gallery-header {
+  margin-bottom: 1em;
+  h2 {
+    color: $blue;
+    font-size: 2.2em;
+    text-align: center;
+    margin: 0;
+    padding: 1em 0 0 0;
+  }
+}
+
+.gallery {
+  @extend .row;
+  .material-placeholder {
+    @extend .col, .s12, .m6, .l3; 
+    margin-bottom: 0.7em;
+    img {
+      width: 100%;
+    }
+  } 
+}
+
+.about {
+  width: 100%;
+  padding: 0 0 1em 0;
+  margin: 0;
+  background: $bg-grey;
+  h2 {
+    color: $blue;
+    font-size: 2.2em;
+    text-align: center;
+    margin: 0;
+    padding: 1em 0 0 0;
+  }
+  p {
+    @extend .light;
+  }
+}
+
+.contact {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 5em;
+  img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+  }
+  h2 {
+    color: $orange;
+    position: relative;
+    z-index: 11;
+    font-size: 2.2em;
+    text-align: center;
+    margin: 0;
+    padding: 1em 0 0 0;
+  }
+  .contact-form {
+    position: relative;
+    top: 3em;
+    @extend .col, .s12, .m8, .l6, .z-depth-3, .white;
+    z-index: 12;
+    float: none !important;
+    margin: 0 auto !important;
+    padding: 2em !important;
+    text-align: center;
+    .input-field {
+      @extend .col, .s12, .m8;
+    }
+    .btn-large {
+      background-color: $orange;
+      margin-top: 1em;
+    }
+  }
+}
+
+.footer {
+  position: relative;
+  z-index: 10000;
+  .social {
+    background: $bg-grey;
+    height: 60px;
+  }
+}
