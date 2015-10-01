@@ -16,6 +16,7 @@
  
 @import "materialize";
 
+$sidenav-bg-color: #000;
 $navbar-font-color: white;
 $bg-grey: #e0e0e0;
 $blue: #29b6f6;
@@ -36,7 +37,7 @@ $nav-hover-height: 0.4em;
 nav {
   background-color: black;
   position: fixed;
-  top: 2em;
+  top: 3em;
   z-index: 1000;
   .hover {
     position: absolute;
@@ -45,6 +46,24 @@ nav {
     bottom: -$nav-hover-height;
     background: $blue;
     transition: 0.4s;
+  }
+  .side-nav {
+    background: #000;
+    img {
+      width: 100%;
+      padding: 1em;
+    }
+    a {
+      color: white;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      padding: 0;
+      text-align: center;
+    }
   }
   ul {
     li {
