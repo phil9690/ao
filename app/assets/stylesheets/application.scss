@@ -26,6 +26,11 @@ $green: #43a047;
 $amber: #ff8f00;
 $orange: #ef6c00;
 
+$footer-social-color: #616161;
+$footer-content-color: #414141;
+$footer-copyright-color: #000;
+$footer-text-color: #fff;
+
 $nav-hover-height: 0.4em;
 
 nav {
@@ -231,7 +236,7 @@ nav {
   .contact-form {
     position: relative;
     top: 3em;
-    @extend .col, .s12, .m8, .l6, .z-depth-3, .white;
+    @extend .col, .s10, .m8, .l6, .z-depth-3, .white;
     z-index: 12;
     float: none !important;
     margin: 0 auto !important;
@@ -250,8 +255,22 @@ nav {
 .footer {
   position: relative;
   z-index: 10000;
+  color: $footer-text-color;
   .social {
-    background: $bg-grey;
+    background: $footer-social-color;
     height: 60px;
+  }
+  .content {
+    background: $footer-content-color;
+    @extend .row;
+    margin: 0;
+  }
+  .copyright {
+    background: $footer-copyright-color;
+    padding: 1em;
+    text-align: center;
+    p {
+      margin: 0;
+    }
   }
 }
