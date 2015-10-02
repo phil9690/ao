@@ -27,6 +27,11 @@ $green: #43a047;
 $amber: #ff8f00;
 $orange: #ef6c00;
 
+$facebook-color: #3b5998;
+$linkedin-color: #007bb5;
+$google-color: #dd4b39;
+$twitter-color: #00aced;
+
 $footer-social-color: #616161;
 $footer-content-color: #414141;
 $footer-copyright-color: #000;
@@ -35,8 +40,9 @@ $footer-text-color: #fff;
 $nav-hover-height: 0.4em;
 
 nav {
+  transition: 0.7s;
   background-color: black;
-  position: fixed;
+  position: absolute;
   top: 3em;
   z-index: 1000;
   .hover {
@@ -79,6 +85,11 @@ nav {
       }
     }
   }
+}
+
+nav.sticky {
+  top: 0;
+  position: fixed;
 }
 
 .brand-logo > img {
@@ -161,8 +172,8 @@ nav {
   }
   &:hover {
     i.activator {
-      font-size: 7em;
       box-shadow: inset 0px 0px 0px 0.08em #fff;
+      transform: rotate(1turn);
     }
     i.activator.camera {
       border: 5px solid $red;
@@ -277,8 +288,34 @@ nav {
   color: $footer-text-color;
   .social {
     background: $footer-social-color;
-    height: 60px;
+    text-align: center;
+    padding: 1em 0;
+    i:before {
+      font-size: 2em;
+      color: #fff;
+    }
+    .flaticon-facebook:hover, .flaticon-facebook:active {
+      &:before {
+        color: $facebook-color;
+      }
+    }
+    .flaticon-linkedin:hover, .flaticon-linkedin:active {
+      &:before {
+        color: $linkedin-color;
+      }
+    }
+    .flaticon-google:hover, .flaticon-google:active {
+      &:before {
+        color: $google-color;
+      }
+    }
+    .flaticon-twitter:hover, .flaticon-twitter:active {
+      &:before {
+        color: $twitter-color;
+      }
+    }
   }
+
   .content {
     background: $footer-content-color;
     @extend .row;
