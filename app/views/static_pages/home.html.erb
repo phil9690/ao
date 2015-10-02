@@ -1,13 +1,14 @@
+<a href="#home" class="scroll-top"><i class="material-icons">keyboard_arrow_up</i></a>
 <nav>
   <div class="nav-wrapper">
     <a href="#" class="brand-logo center"><%= image_tag "aologo.png" %></a>
     <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="material-icons">menu</i></a>
     <ul id="nav-mobile" class="left hide-on-med-and-down">
-      <li><a href="!#">Home</a><div class="hover"></div></li>
-      <li><a href="!#">Services</a><div class="hover"></li>
-      <li><a href="!#">Gallery</a><div class="hover"></li>
-      <li><a href="!#">About</a><div class="hover"></li>
-      <li><a href="!#">Contact us</a><div class="hover"></li>
+      <li><a href="#home">Home</a><div class="hover"></div></li>
+      <li><a href="#services">Services</a><div class="hover"></li>
+      <li><a href="#gallery">Gallery</a><div class="hover"></li>
+      <li><a href="#about">About</a><div class="hover"></li>
+      <li><a href="#contact">Contact us</a><div class="hover"></li>
     </ul>
     <ul class="side-nav" id="mobile-nav">
       <%= image_tag "aologo.png" %>
@@ -20,7 +21,7 @@
   </div>
 </nav>
 
-<div class="main-image">
+<div class="main-image" id="home">
   <%= image_tag "boat_house.jpg" %>
   <div class="main-image-text">
     <h1>Airborne Optics</h1>
@@ -28,7 +29,7 @@
   </div>
 </div>
 
-<div class="services">
+<div class="services" id="services">
   <div class="wrapper">
     <div class="services-header">
       <h2>Services we offer</h2>
@@ -105,7 +106,7 @@
   </div>
 </div>
 
-<div class="gallery">
+<div class="gallery" id="gallery">
   <div class="container">
     <div class="gallery-header">
       <h2>Gallery</h2>
@@ -121,7 +122,7 @@
   </div>
 </div>
 
-<div class="about">
+<div class="about" id="about">
   <div class="container">
     <h2>A little bit about us</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in dui hendrerit, facilisis libero quis, tristique dolor. Proin malesuada purus sed felis hendrerit, at tincidunt ipsum faucibus. Aenean vitae porta mauris. Cras fringilla tortor quis nisi gravida condimentum ut sit amet quam. Donec sed quam augue. Phasellus ut hendrerit ante, sit amet elementum mauris. Nunc mattis sollicitudin massa, ut cursus odio facilisis nec. Donec dignissim lectus quis erat ultricies, eu aliquet ligula ultricies. Nunc sagittis neque arcu, in porttitor sem ultricies id. Cras euismod urna euismod libero sollicitudin tincidunt. Aliquam accumsan eu turpis at dignissim. Donec at ligula egestas, pulvinar libero sit amet, varius augue. Vestibulum ac lectus lorem. Nulla congue lacus felis.</p>
@@ -129,7 +130,7 @@
   </div>
 </div>
 
-<div class="contact">
+<div class="contact" id="contact">
   <%= image_tag "contact_bg" %>
   <div class="row">
     <h2>Contact us</h2>
@@ -164,6 +165,10 @@
 
 <div class="footer">
   <div class="social">
+    <a href="www.linkedin.com"><i class="flaticon-linkedin"></i></a>
+    <a href="www.facebook.com"><i class="flaticon-facebook"></i></a>
+    <a href="www.google.com"><i class="flaticon-google"></i></a>
+    <a href="www.twitter.com"><i class="flaticon-twitter"></i></a>
   </div>
   <div class="content">
     <div class="col s12 m8">

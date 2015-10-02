@@ -284,7 +284,7 @@ nav.sticky {
 
 .footer {
   position: relative;
-  z-index: 10000;
+  z-index: 20;
   color: $footer-text-color;
   .social {
     background: $footer-social-color;
@@ -328,5 +328,19 @@ nav.sticky {
     p {
       margin: 0;
     }
+  }
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 0.5em;
+  right: 1em;
+  z-index: 9999;
+  background: $red;
+  border-radius: 50%;
+  padding: 0.6em;
+  .material-icons {
+    font-size: 3em;
+    color: #fff;
   }
 }
